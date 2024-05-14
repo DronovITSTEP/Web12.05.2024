@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Web12._05._2024.Data;
 
@@ -11,9 +12,11 @@ using Web12._05._2024.Data;
 namespace Web12._05._2024.Migrations
 {
     [DbContext(typeof(Web12_05_2024Context))]
-    partial class Web12_05_2024ContextModelSnapshot : ModelSnapshot
+    [Migration("20240514175510_Rating")]
+    partial class Rating
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
